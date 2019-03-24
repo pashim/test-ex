@@ -8,3 +8,5 @@
  */
 
 rootProject.name = 'test-ex'
+
+include 'annotations', 'application'
