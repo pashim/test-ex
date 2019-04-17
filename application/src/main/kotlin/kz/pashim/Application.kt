@@ -2,6 +2,7 @@ package kz.pashim
 
 import kz.pashim.stream.TestKotlinStream
 import kz.pashim.stream.TestStream
+import kz.pashim.trywithres.TestTryWithRes
 
 fun main(args: Array<String>) {
 //    var obj: SomeObject = SomeObject("objw")
@@ -17,7 +18,8 @@ fun main(args: Array<String>) {
 //    ExperimentalClass().runLambda()
 //    KotlinLambdaEx.test()
 //    TestStream().run()
-    TestKotlinStream().run()
+//    TestKotlinStream().run()
+    TestTryWithRes().run()
 }
 
 @Experimentaaal(arg1 = "dwdwdw", arg4 = ExperimentalClass::class)
