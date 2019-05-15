@@ -8,7 +8,7 @@ class TestKotlinStream {
 
     fun run() {
         val list = ArrayList<String>()
-        for (i in 0..20000000) {
+        for (i in 0..5) {
             list.add("String2s_$i")
         }
 //        val stream = list.stream()
@@ -52,16 +52,16 @@ class TestKotlinStream {
 
         println("twoStepListProcessing: " + measureTimeMillis {
             list
-                    .filter { it.length < 20 }
-                    .filter { it.length > 2 }
-                    .map { it + it.length }
+                    .filter { println("in filter 1"); it.length < 20 }
+                    .filter { println("in filter 2"); it.length > 2 }
+                    .map { println("in filter 3");it + it.length }
         })
 
         println("twoStepSequenceProcessing: " + measureTimeMillis {
             list.asSequence()
-                    .filter { it.length < 20 }
-                    .filter { it.length > 2 }
-                    .map { it + it.length }
+                    .filter { println("in filter 1");it.length < 20 }
+                    .filter { println("in filter 2");it.length > 2 }
+                    .map { println("in filter 3");it + it.length }
                     .toList()
         })
 

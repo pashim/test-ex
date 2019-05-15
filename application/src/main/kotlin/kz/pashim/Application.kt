@@ -2,6 +2,8 @@ package kz.pashim
 
 import kz.pashim.stream.TestKotlinStream
 import kz.pashim.stream.TestStream
+import kz.pashim.threads.CoroutinesTest
+import kz.pashim.threads.TestThreads
 import kz.pashim.trywithres.TestTryWithRes
 
 fun main(args: Array<String>) {
@@ -19,7 +21,9 @@ fun main(args: Array<String>) {
 //    KotlinLambdaEx.test()
 //    TestStream().run()
 //    TestKotlinStream().run()
-    TestTryWithRes().run()
+//    TestTryWithRes().run()
+//    TestThreads().run()
+    CoroutinesTest().run()
 }
 
 @Experimentaaal(arg1 = "dwdwdw", arg4 = ExperimentalClass::class)
